@@ -1,0 +1,5 @@
+"use client";
+
+export default function GlobalError({ reset }: { error: Error & { digest?: string }; reset: () => void }) {
+  return <html lang="en"><body><main style={{ minHeight:"100vh",display:"grid",placeContent:"center",padding:"24px",fontFamily:"Plus Jakarta Sans Variable, sans-serif",background:"#121318",color:"#e6e1e9" }}><div style={{ maxWidth:"480px" }}><p style={{ color:"#c3c0ff",fontSize:"12px",fontWeight:700,textTransform:"uppercase",letterSpacing:".08em" }}>SchoolHub</p><h1 style={{ margin:"10px 0",fontSize:"26px" }}>The application couldn’t start</h1><p style={{ color:"#c9c5d0",fontSize:"14px",lineHeight:1.6 }}>Refresh the application. If the issue continues, contact your system administrator. Your saved school records are not affected.</p><button onClick={reset} style={{ minHeight:"42px",marginTop:"20px",padding:"0 18px",border:0,borderRadius:"10px",background:"#c3c0ff",color:"#25215f",fontWeight:700 }} type="button">Reload application</button></div></main></body></html>;
+}

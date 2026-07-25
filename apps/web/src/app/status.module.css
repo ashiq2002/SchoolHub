@@ -1,0 +1,6 @@
+.page { min-height: 100dvh; display: grid; place-content: center; justify-items: start; gap: var(--space-3); max-width: 34rem; margin: auto; padding: var(--space-6); }
+.page h1 { font-size: var(--text-xl); }
+.page p { color: var(--text-secondary); line-height: 1.6; }
+.mark { color: var(--action-primary); font-size: var(--text-sm); font-weight: 700; letter-spacing: .08em; }
+.link { margin-top: var(--space-2); min-height: var(--control-md); display: inline-flex; align-items: center; padding: 0 var(--space-4); border-radius: var(--radius-md); color: var(--on-action); background: var(--action-primary); font-weight: 650; text-decoration: none; }
+.link:hover { background: var(--action-primary-hover); }

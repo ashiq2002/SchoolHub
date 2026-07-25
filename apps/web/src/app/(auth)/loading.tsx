@@ -1,0 +1,3 @@
+export default function AuthenticationLoading() {
+  return <main aria-label="Loading authentication" role="status" style={{ minHeight: "100dvh", display: "grid", gridTemplateColumns: "minmax(330px,42%) 1fr", background: "var(--surface-canvas)" }}><div style={{ background: "var(--action-primary)" }} /><div style={{ display: "grid", placeItems: "center", padding: 24 }}><div style={{ width: "min(100%,420px)", height: 480, borderRadius: 16, background: "var(--surface-raised)", boxShadow: "var(--shadow-card)" }}><span style={{ position: "absolute", width: 1, height: 1, overflow: "hidden" }}>Loading secure sign-in…</span></div></div></main>;
+}

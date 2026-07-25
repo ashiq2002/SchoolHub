@@ -1,0 +1,57 @@
+.shell { min-height: 100dvh; display: flex; }
+.skipLink { position: fixed; z-index: 100; top: var(--space-2); left: var(--space-2); transform: translateY(-160%); padding: var(--space-2) var(--space-3); border-radius: var(--radius-md); color: var(--on-action); background: var(--action-primary); font-weight: 700; text-decoration: none; }
+.skipLink:focus { transform: translateY(0); }
+.sidebar { position: fixed; z-index: 20; inset: 0 auto 0 0; width: 244px; display: flex; flex-direction: column; border-right: 1px solid var(--border-default); background: color-mix(in srgb, var(--sidebar-bg) 96%, var(--action-soft)); }
+.brandRow { height: 65px; padding: 0 var(--space-5); display: flex; align-items: center; justify-content: space-between; }
+.brand { display: inline-flex; gap: 10px; align-items: center; color: var(--text-primary); font-size: 17px; font-weight: 750; letter-spacing: -.02em; text-decoration: none; }
+.brandMark { width: 31px; height: 31px; display: inline-grid; place-items: center; border-radius: 10px; color: #fff; background: linear-gradient(145deg, #675ff2, #4f46e5); font-size: 15px; font-weight: 800; box-shadow: 0 5px 13px rgb(79 70 229 / 24%); }
+.closeNavigation { display: none !important; }
+.nav { flex: 1; overflow-y: auto; padding: var(--space-2) var(--space-3) var(--space-6); }
+.navGroup { display: grid; gap: 2px; margin-top: var(--space-4); }
+.navGroup:first-child { margin-top: 0; }
+.navLabel { padding: var(--space-2) var(--space-3) 6px; color: var(--text-muted); font-size: 13px; font-weight: 750; letter-spacing: .09em; text-transform: uppercase; }
+.navItem { position: relative; min-height: 42px; display: flex; align-items: center; gap: var(--space-3); padding: 0 var(--space-3); border-radius: var(--radius-pill); color: var(--text-secondary); font-weight: 540; text-decoration: none; transition: color var(--duration-fast), background var(--duration-fast), transform var(--duration-fast); }
+.navItem:hover { color: var(--text-primary); background: var(--surface-subtle); }
+.navItemActive { color: var(--action-primary); background: var(--action-soft); font-weight: 680; }
+.navItemActive:hover { color: var(--action-primary); background: var(--action-soft); }
+.sidebarFooter { min-height: 71px; padding: var(--space-3) var(--space-4); display: flex; align-items: center; gap: 10px; border-top: 1px solid var(--border-default); }
+.avatar { width: 34px; height: 34px; flex: 0 0 auto; display: grid; place-items: center; border-radius: 50%; color: #625037; background: #e8d8bd; font-size: 14px; font-weight: 750; }
+.userText { min-width: 0; display: grid; flex: 1; color: inherit; line-height: 1.25; text-decoration: none; }
+.userText strong { overflow: hidden; font-size: 14px; text-overflow: ellipsis; white-space: nowrap; }
+.userText span { color: var(--text-muted); font-size: 13px; }
+.accountMenu { min-width: 30px; height: 30px; border: 0; color: var(--text-muted); background: transparent; cursor: pointer; }
+.workspace { min-width: 0; min-height: 100dvh; margin-left: 244px; flex: 1; }
+.topbar { position: sticky; z-index: 10; top: 0; height: 65px; padding: 0 var(--space-8); display: flex; align-items: center; gap: var(--space-6); border-bottom: 1px solid color-mix(in srgb, var(--border-default) 78%, transparent); background: color-mix(in srgb, var(--surface-raised) 86%, transparent); box-shadow: 0 1px 8px rgb(40 36 62 / 4%); backdrop-filter: blur(18px) saturate(1.25); }
+.menuButton { display: none !important; }
+.contextButton { min-width: 245px; height: var(--control-lg); display: flex; align-items: center; gap: 10px; padding: 0 var(--space-2); border: 0; color: var(--text-primary); background: transparent; text-align: left; cursor: pointer; }
+.schoolSymbol { width: 36px; height: 36px; flex: 0 0 auto; display: grid; place-items: center; border: 1px solid color-mix(in srgb, var(--action-primary) 20%, var(--border-default)); border-radius: 11px; color: var(--action-primary); background: var(--action-soft); font-size: 13px; font-weight: 800; }
+.contextText { min-width: 0; display: grid; flex: 1; line-height: 1.3; }
+.contextText strong { overflow: hidden; font-size: 14px; text-overflow: ellipsis; white-space: nowrap; }
+.contextText small { color: var(--text-muted); font-size: 13px; }
+.searchButton { width: min(410px, 40vw); height: 36px; margin: 0 auto; display: flex; align-items: center; gap: 9px; padding: 0 var(--space-3); border: 1px solid var(--border-default); border-radius: var(--radius-md); color: var(--text-muted); background: var(--surface-canvas); cursor: pointer; }
+.searchButton span { overflow: hidden; flex: 1; text-align: left; text-overflow: ellipsis; white-space: nowrap; }
+.searchButton kbd { min-width: 20px; height: 20px; display: grid; place-items: center; border: 1px solid var(--border-default); border-radius: 4px; color: var(--text-muted); background: var(--surface-raised); font-size: 14px; }
+.topbarActions { display: flex; align-items: center; gap: var(--space-1); }
+.notificationDot { position: absolute; width: 7px; height: 7px; margin: -15px 0 0 14px; border: 2px solid var(--surface-raised); border-radius: 50%; background: var(--danger); }
+.main { min-height: calc(100dvh - 65px); }
+.scrim { display: none; }
+
+@media (max-width: 960px) {
+  .sidebar { transform: translateX(-101%); box-shadow: var(--shadow-overlay); transition: transform var(--duration-normal) var(--ease-standard); }
+  .sidebarOpen { transform: translateX(0); }
+  .closeNavigation { display: inline-grid !important; }
+  .scrim { position: fixed; z-index: 19; inset: 0; display: block; border: 0; visibility: hidden; opacity: 0; background: rgb(10 20 32 / 42%); transition: opacity var(--duration-normal), visibility var(--duration-normal); }
+  .scrimOpen { visibility: visible; opacity: 1; }
+  .workspace { margin-left: 0; }
+  .menuButton { display: inline-grid !important; }
+  .topbar { padding: 0 var(--space-4); gap: var(--space-3); }
+  .searchButton { margin-left: auto; }
+}
+@media (max-width: 640px) {
+  .topbar { height: 58px; }
+  .contextButton { min-width: 0; padding: 0; }
+  .contextText, .contextButton > svg { display: none; }
+  .searchButton { width: var(--control-md); padding: 0; justify-content: center; border-color: transparent; background: transparent; }
+  .searchButton span, .searchButton kbd, .topbarActions > :nth-child(2) { display: none; }
+  .main { min-height: calc(100dvh - 58px); }
+}
